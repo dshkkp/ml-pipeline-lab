@@ -29,7 +29,7 @@ def build_pipeline():
 
     categorical_pipeline = Pipeline([
         ("imputer", SimpleImputer(strategy="most_frequent")),
-        ("encoder", OneHotEncoder(handle_unknown="ignore")),
+        ("encoder", OneHotEncoder(handle_unknown="error")),
     ])
 
     preprocessor = ColumnTransformer([
