@@ -73,4 +73,4 @@ def predict_churn(model, df):
 def predict_churn_probability(model, df):
     """Возвращаем вероятность оттока клиента"""
 
-    return model.predict_proba(df[FEATURES])[:, 1]
+    return model.predict_proba(df[FEATURES])[:, 0]
