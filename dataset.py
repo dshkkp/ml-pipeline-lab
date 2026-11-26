@@ -6,7 +6,7 @@ import pandas as pd
 def make_dataset(n_samples=300, random_state=42):
     """Создаёт синтетический датасет для прогнозирования оттока клиентов."""
 
-    rng = np.random.default_rng(random_state)
+    rng = np.random.default_rng(42)
 
     age = rng.integers(18, 75, size=n_samples)
     tenure = rng.integers(1, 61, size=n_samples)
